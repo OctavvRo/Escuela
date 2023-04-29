@@ -14,7 +14,7 @@ public class Escuela {
         
         //e1.establecerAtributos();
         e1.agregarAsignatura();
-          e1.eliminarAsignatura();
+        e1.eliminarAsignatura();
     }
     
 }

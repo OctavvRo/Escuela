@@ -37,20 +37,22 @@ public class Estudiante {
         Scanner e = new Scanner(System.in);
         this.asignatura =new ArrayList<>(); 
         
-        
+        //Cantidad de asignaturas que se agregaran a la lista.
         System.out.println("Ingresa la cantidad de asignaturas que quieras agregar: ");
         this.cantidad = e.nextInt();
         
+        //Ciclo para ingresar por teclado las asignaturas.
         int contador = 1;
-        for(int i=0; i<= cantidad; i++){
-            System.out.println("Ingresa la asignatura "+ (contador)+ ":");
-           
+        for(int i=0; i<cantidad; i++){
+            
+            System.out.println("Ingresa la asignatura "+(contador)+ ":");
             String valor = e.nextLine();
             asignatura.add(valor);
             contador= contador+1;
       
         }
-        for(int i=0; i< 5; i++){
+        //ciclo que muestra las asignaturas ingresadas.
+        for(int i=0; i< cantidad; i++){
             //System.out.println(asignatura.get(i));
       
         }
@@ -65,7 +67,6 @@ public class Estudiante {
       
         }
            int eliminar= e.nextInt();
-           //int eliminar2 = eliminar-1;
            asignatura.remove(eliminar-1);
         for(int i=0; i< (cantidad-1); i++){
             System.out.println((i+1)+" "+asignatura.get(i));
