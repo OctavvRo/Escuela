@@ -41,12 +41,13 @@ public class Estudiante {
         System.out.println("Ingresa la cantidad de asignaturas que quieras agregar: ");
         this.cantidad = e.nextInt();
         
-        for(int i=0; i< cantidad; i++){
-            System.out.println("Ingresa la asignatura "+ (i+1)+ ":");
-            
-            
+        int contador = 1;
+        for(int i=0; i<= cantidad; i++){
+            System.out.println("Ingresa la asignatura "+ (contador)+ ":");
+           
             String valor = e.nextLine();
             asignatura.add(valor);
+            contador= contador+1;
       
         }
         for(int i=0; i< 5; i++){
