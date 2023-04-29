@@ -12,7 +12,7 @@ public class Estudiante {
     private String nombre;
     private int edad;
     private List<String> asignatura;
-    
+    private int cantidad;
     //método scanner
     Scanner e = new Scanner(System.in);
     
@@ -37,10 +37,14 @@ public class Estudiante {
         Scanner e = new Scanner(System.in);
         this.asignatura =new ArrayList<>(); 
         
-        int cantidad = 5;
         
-        for(int i=0; i< 5; i++){
-            System.out.println("Ingresa la asignatura "+ (i+1));
+        System.out.println("Ingresa la cantidad de asignaturas que quieras agregar: ");
+        this.cantidad = e.nextInt();
+        
+        for(int i=0; i< cantidad; i++){
+            System.out.println("Ingresa la asignatura "+ (i+1)+ ":");
+            
+            
             String valor = e.nextLine();
             asignatura.add(valor);
       
@@ -55,14 +59,14 @@ public class Estudiante {
         public void eliminarAsignatura(){
             System.out.println("Ingresa la asignatura que quieras eliminar ");
             
-            for(int i=0; i< 5; i++){
+            for(int i=0; i< cantidad; i++){
             System.out.println((i+1)+" "+asignatura.get(i));
       
         }
            int eliminar= e.nextInt();
            //int eliminar2 = eliminar-1;
            asignatura.remove(eliminar-1);
-        for(int i=0; i< 4; i++){
+        for(int i=0; i< (cantidad-1); i++){
             System.out.println((i+1)+" "+asignatura.get(i));
       
         }
