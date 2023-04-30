@@ -43,14 +43,21 @@ public class Estudiante {
         
         //Ciclo para ingresar por teclado las asignaturas.
         int contador = 1;
-        for(int i=0; i<cantidad; i++){
-            
-            System.out.println("Ingresa la asignatura "+(contador)+ ":");
-            String valor = e.nextLine();
-            asignatura.add(valor);
-            contador= contador+1;
-      
+        
+        for (int i = 0; i < cantidad; i++) {
+            if(i%2==0){System.out.println("Ingresa la asignatura "+(contador)+ ":");
+            String string = e.next();
+            asignatura.add(string);
+            contador+=1;
+        }else{
+                System.out.println("Ingresa la nota");
+                String string = e.next();
+                asignatura.add(string);
+
+            }
+        
         }
+            
         //ciclo que muestra las asignaturas ingresadas.
         for(int i=0; i< cantidad; i++){
             //System.out.println(asignatura.get(i));
@@ -72,5 +79,6 @@ public class Estudiante {
             System.out.println((i+1)+" "+asignatura.get(i));
       
         }
+        
            
 }}
