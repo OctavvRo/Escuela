@@ -14,6 +14,7 @@ public class Escuela {
         
         //e1.agregarAsignatura();
         //e1.eliminarAsignatura();
+        e1.crearMatriz();
     }
     
 }

@@ -2,6 +2,7 @@
 package escuela;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,6 +14,7 @@ public class Estudiante {
     private int edad;
     private List<String> asignatura;
     private int cantidad;
+    private HashMap<String,Integer> Lista = new HashMap<>();
     //método scanner
     Scanner e = new Scanner(System.in);
     
@@ -78,7 +80,40 @@ public class Estudiante {
         for(int i=0; i< (cantidad-1); i++){
             System.out.println((i+1)+" "+asignatura.get(i));
       
+        }}
+        
+        
+        public void crearMatriz(){
+            System.out.println("Ingresa la cantidad de asignaturas que quieras agregar: ");
+            int asignaturas = e.nextInt();
+            String[][] matriz = new String[asignaturas][2];
+            e.nextLine();
+            for(int i = 0; i< matriz.length;i++)
+                {
+                    System.out.println("Ingresa el nombre de la materia: ");
+                    
+                    
+                    matriz[i][0]= e.nextLine();
+                    
+            }
+              for(int i = 0; i< matriz.length;i++)
+                {
+                    System.out.println("Ingresa la nota: "+(i+1));
+                    String nota= e.nextLine();
+                    matriz[i][1] = String.format("%.1f", nota);
+                    
+            }   
+                
+            for(int i= 0; i < 3;i++){
+       
+                    System.out.print("Asigantura: "+matriz[i][0]+" Nota: ");
+                    System.out.println(matriz[i][1]);
+                
+            }
+            
+            
+            
         }
         
            
-}}
+}
